@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-08 09:35:31
+ * @LastEditTime: 2021-12-08 17:03:10
+ * @LastEditors: your name
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \edcTreeselect\docs\components\MoreFeatures.vue
+-->
 <template>
   <div>
     <div :dir="rtl ? 'rtl' : 'ltr'">
@@ -55,7 +63,7 @@
       openOnFocus: false,
       clearOnSelect: true,
       closeOnSelect: false,
-      alwaysOpen: false,
+      alwaysOpen: true,
       appendToBody: false,
       rtl: false,
       value: [ 'a' ],

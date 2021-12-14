@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-12-08 09:35:31
+ * @LastEditTime: 2021-12-08 15:50:05
+ * @LastEditors: your name
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \edcTreeselect\build\webpack-configs\base.js
+ */
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const utils = require('./utils')
@@ -48,6 +56,10 @@ module.exports = {
         options: {
           limit: 10000,
         },
+      },
+      {
+        test: /\.(png|jpg|gif|eot|woff|ttf|svg|webp|PNG)(\?\S*)?$/,
+        use: ["file-loader"],
       },
     ],
   },

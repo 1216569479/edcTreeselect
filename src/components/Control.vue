@@ -51,20 +51,26 @@
           instance.internalValue.some(id => !instance.getNode(id).isDisabled)
         )
       },
-      /* eslint-enable valid-jsdoc */
+    /* eslint-enable valid-jsdoc */
     },
 
     methods: {
       renderX() {
         const { instance } = this
-        const title = instance.multiple ? instance.clearAllText : instance.clearValueText
+        const title = instance.multiple
+          ? instance.clearAllText
+          : instance.clearValueText
 
         if (!this.shouldShowX) return null
 
         return (
-          <div class="vue-treeselect__x-container" title={title} onMousedown={this.handleMouseDownOnX}>
-            <DeleteIcon class="vue-treeselect__x" />
-          </div>
+        <div
+          class="vue-treeselect__x-container"
+          title={title}
+          onMousedown={this.handleMouseDownOnX}
+        >
+          <DeleteIcon class="vue-treeselect__x" />
+        </div>
         )
       },
 
@@ -78,9 +84,12 @@
         if (!this.shouldShowArrow) return null
 
         return (
-          <div class="vue-treeselect__control-arrow-container" onMousedown={this.handleMouseDownOnArrow}>
-            <ArrowIcon class={arrowClass} />
-          </div>
+        <div
+          class="vue-treeselect__control-arrow-container"
+          onMousedown={this.handleMouseDownOnArrow}
+        >
+          <ArrowIcon class={arrowClass} />
+        </div>
         )
       },
 
@@ -109,10 +118,10 @@
         } else {
           // Keep the same behavior here.
           setTimeout(() => handler(result), 0)
-          // Also, note that IE9 requires:
-          //   setTimeout(() => fn(...args), delay)
-          // Instead of:
-          //   setTimeout(fn, delay, ...args)
+        // Also, note that IE9 requires:
+        //   setTimeout(() => fn(...args), delay)
+        // Instead of:
+        //   setTimeout(fn, delay, ...args)
         }
       }),
 
@@ -129,11 +138,7 @@
 
       // This is meant to be called by child `<Value />` component.
       renderValueContainer(children) {
-        return (
-          <div class="vue-treeselect__value-container">
-            {children}
-          </div>
-        )
+        return <div class="vue-treeselect__value-container">{children}</div>
       },
     },
 
@@ -142,11 +147,14 @@
       const ValueContainer = instance.single ? SingleValue : MultiValue
 
       return (
-        <div class="vue-treeselect__control" onMousedown={instance.handleMouseDown}>
-          <ValueContainer ref="value-container" />
-          {this.renderX()}
-          {this.renderArrow()}
-        </div>
+      <div
+        class="vue-treeselect__control"
+        onMousedown={instance.handleMouseDown}
+      >
+        <ValueContainer ref="value-container" />
+        {this.renderX()}
+        {this.renderArrow()}
+      </div>
       )
     },
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@riophae/vue-treeselect",
+  "name": "edc-treeselect",
   "version": "0.4.0",
   "description": "A multi-select component with nested options support for Vue.js",
   "author": "Riophae Lee <riophaelee@gmail.com>",
@@ -33,8 +33,10 @@
   "pre-commit": "lint",
   "dependencies": {
     "@babel/runtime": "^7.3.1",
+    "@element-plus/icons": "0.0.11",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "easings-css": "^1.0.0",
+    "element-ui": "^2.15.6",
     "fuzzysearch": "^1.0.3",
     "is-promise": "^2.1.0",
     "lodash": "^4.0.0",
@@ -111,6 +113,7 @@
     "url-loader": "^2.0.1",
     "vodal": "^2.3.3",
     "vue": "^2.2.0",
+    "vue-eslint-parser": "^8.0.1",
     "vue-loader": "^15.6.0",
     "vue-style-loader": "^4.0.2",
     "vue-template-compiler": "^2.4.4",

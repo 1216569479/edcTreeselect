@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-12-08 09:35:31
+ * @LastEditTime: 2021-12-08 18:29:49
+ * @LastEditors: your name
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \edcTreeselect\docs\main.js
+ */
 import 'script-loader!../static/prism.min.js'
 import 'regenerator-runtime/runtime'
 import 'yaku/lib/global'
@@ -9,7 +17,9 @@ import './styles/prism.less'
 
 Vue.config.productionTip = false
 Vue.component('treeselect', Treeselect)
-
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 let sections
 
 function calculateNavPositions() {

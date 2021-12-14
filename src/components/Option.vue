@@ -142,7 +142,7 @@
         }
 
         if (!checkMark) checkMark = (
-          <span class="vue-treeselect__check-mark" />
+          <span class="vue-treeselect__check-mark el-icon-check" />
         )
         if (!minusMark) minusMark = (
           <span class="vue-treeselect__minus-mark" />
