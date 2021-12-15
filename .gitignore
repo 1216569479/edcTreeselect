@@ -10,5 +10,6 @@ yarn.lock
 
 dist
 gh-pages
-
+*.rar
+*.zip
 test/unit/coverage
